@@ -52,10 +52,14 @@ with open('skeleton_alphabet.svg', 'w') as svg:
   svg_attr = ' '.join(f"{key}=\"{val}\"" for key, val in svg_attributes.items())
   svg.write(f"<svg width=\"{svg_size[0]}mm\" height=\"{svg_size[1]}mm\" viewBox=\"0 0 {svg_size[0]} {svg_size[1]}\" xmlns=\"http://www.w3.org/2000/svg\" {svg_attr}>\n")
 
-  for idx, char in enumerate('ABCDEFGHIJKLMNOPQRSTUVWXYZ'):
-    svg.write(f"  <path transform=\"translate({.5 + idx},1.5)\" d=\"{skel_alpha[char].format(**dimensions)}\" />\n")
+  xpos = .5
+  for char in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+    svg.write(f"  <path transform=\"translate({xpos},1.5)\" d=\"{skel_alpha[char]['d'].format(**dimensions)}\" />\n")
+    xpos += eval(skel_alpha[char]['w'].format(**dimensions)) + .25
 
-  for idx, char in enumerate('abcdefghijklmnopqrstuvwxyz'):
-    svg.write(f"  <path transform=\"translate({.5 + idx},3.5)\" d=\"{skel_alpha[char].format(**dimensions)}\" />\n")
+  xpos = .5
+  for char in 'abcdefghijklmnopqrstuvwxyz':
+    svg.write(f"  <path transform=\"translate({xpos},3.5)\" d=\"{skel_alpha[char]['d'].format(**dimensions)}\" />\n")
+    xpos += eval(skel_alpha[char]['w'].format(**dimensions)) + .25
 
   svg.write("</svg>\n")
