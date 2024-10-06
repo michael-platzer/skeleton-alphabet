@@ -51,5 +51,18 @@
   "w": {"w": "{p} + {p}",   "d": "M 0 -{k} l {kd} {k} l {kd} -{kp} l {kd} {kp} l {kd} -{k}"},
   "x": {"w": "{kp}",        "d": "M 0 0 l {kp} -{k} m -{kp} 0 l {kp} {k}"},
   "y": {"w": "{k}",         "d": "M 0 -{k} l {kr} {cr} m {kr} -{cr} l -{k} {s}"},
-  "z": {"w": "{k}",         "d": "M 0 -{k} h {kp} l -{kp} {k} h {kp}"}
+  "z": {"w": "{k}",         "d": "M 0 -{k} h {kp} l -{kp} {k} h {kp}"},
+
+  "0": {"w": "{k}",         "d": "M 0 -{kr} q 0 {kc} {km} {kd} t {kd} {km} t {kd} -{km} t {km} -{kd} V -{p} v -{kd} q 0 -{kc} -{km} -{kd} t -{kd} -{km} t -{kd} {km} t -{km} {kd} V -{kr}"},
+  "1": {"w": "{kd}",        "d": "M {kd} 0 v -{s} l -{kd} {kd}"},
+  "2": {"w": "{kp}",        "d": "M {kp} 0 h -{kp} l {kd} -{kd} l {kd} -{kd} q {km} -{km} {km} -{kd} t -{km} -{kd} t -{kd} -{km} t -{kd} {km}"},
+  "3": {"w": "{kd} + {br}", "d": "M 0 -{km} q {km} {km} {kd} {km} q {bc} 0 {bd} -{bm} t {bm} -{bd} t -{bm} -{bd} t -{bd} -{bm} q {tc} 0 {td} -{tm} t {tm} -{td} t -{tm} -{td} t -{td} -{tm} q -{kc} 0 -{kd} {km}"},
+  "4": {"w": "{kp}",        "d": "M {pp} 0 v -{s} l -{pp} {k} h {kp}"},
+  "5": {"w": "{kd} + {br}", "d": "M 0 -{km} q {km} {km} {kd} {km} q {bc} 0 {bd} -{bm} t {bm} -{bd} t -{bm} -{bd} t -{bd} -{bm} q -{kc} 0 -{kd} {km} V -{s} h {bp}"},
+  "6": {"w": "{b}",         "d": "M 0 -{br} q 0 -{bc} {bm} -{bd} t {bd} -{bm} t {bd} {bm} t {bm} {bd} t -{bm} {bd} t -{bd} {bm} t -{bd} -{bm} t -{bm} -{bd} v -{t} q 0 -{bc} {bm} -{bd} t {bd} -{bm} q {kc} 0 {kd} {km}"},
+  "7": {"w": "{kp}",        "d": "M 0 -{s} h {kp} l -{kp} {s}"},
+  "8": {"w": "{b}",         "d": "M {br} 0 q -{bc} 0 -{bd} -{bm} t -{bm} -{bd} t {bm} -{bd} t {bd} -{bm} t {bd} {bm} t {bm} {bd} t -{bm} {bd} t -{bd} {bm} m 0 -{s} q {tc} 0 {td} {tm} t {tm} {td} t -{tm} {td} t -{td} {tm} t -{td} -{tm} t -{tm} -{td} t {tm} -{td} t {td} -{tm}"},
+  "9": {"w": "{b}",         "d": "M {b} -{t} m 0 -{br} q 0 {bc} -{bm} {bd} t -{bd} {bm} t -{bd} -{bm} t -{bm} -{bd} t {bm} -{bd} t {bd} -{bm} t {bd} {bm} t {bm} {bd} v {t} q 0 {bc} -{bm} {bd} t -{bd} {bm} q -{kc} 0 -{kd} -{km}"},
+
+  ".": {"w": "0",           "d": "M 0 0 v -{hm}"}
 }
