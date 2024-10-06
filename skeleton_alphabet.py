@@ -41,7 +41,7 @@ upper_circ = {key: dim for char, val in circ_dia.items() for key, dim in {
 
 dimensions = base_dim | circ_dia | upper_circ | A_dim
 
-svg_size       = (36, 6)
+svg_size       = (36, 8)
 svg_attributes = {
   'style': "fill:none;stroke:black;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round"
 }
@@ -66,5 +66,13 @@ with open('skeleton_alphabet.svg', 'w') as svg:
   for char in '0123456789':
     svg.write(f"  <path transform=\"translate({xpos},5.5)\" d=\"{skel_alpha[char]['d'].format(**dimensions)}\" />\n")
     xpos += eval(skel_alpha[char]['w'].format(**dimensions)) + .25
+
+  xpos = .5
+  for char in 'The quick onyx goblin jumps over the lazy dwarf.':
+    if char == ' ':
+      xpos += .55
+    else:
+      svg.write(f"  <path transform=\"translate({xpos},7.5)\" d=\"{skel_alpha[char]['d'].format(**dimensions)}\" />\n")
+      xpos += eval(skel_alpha[char]['w'].format(**dimensions)) + .25
 
   svg.write("</svg>\n")
